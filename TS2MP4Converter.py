@@ -162,7 +162,7 @@ class TSConverterApp:
         for idx, ts_file in enumerate(ts_files):
             self.update_progress(idx, total_files)
             if not any(sub in ts_file for sub in self.forbidden_folders):
-                mp4_file = ts_file.replace(".ts", ".mp4")
+                mp4_file = ts_file.replace(".ts", "_ts2mp4.mp4")
                 if ts_file in log_data and log_data[ts_file]['Status'] == 'Success':
                     continue
                 file_count +=1
